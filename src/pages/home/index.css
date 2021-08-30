@@ -1,0 +1,7 @@
+
+.home{
+    background: url("https://i.imgur.com/Zk6TR5k.jpg") center center / cover no-repeat fixed;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
