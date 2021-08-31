@@ -1,0 +1,24 @@
+.IconsDesktop{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+.icon__desktop{
+    width: 70px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.icon__text{
+    width: 100%;
+    font-size: 10px;
+    color: white;
+    text-shadow: black 0px 1px 1px;
+    margin-top: 5px;
+    margin-left: 7px;
+    display: flex;
+    justify-content: center;
+}

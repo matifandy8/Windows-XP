@@ -5,7 +5,7 @@ import second from './secondicon.png';
 import virus from './virusicon.png';
 
 
-const StartBar = () => {
+const StartBar: React.FC = () => {
     const today = new Date()
     const time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
 
@@ -17,9 +17,9 @@ const StartBar = () => {
             </div>
         </div>
         <div className="items item-right">
-        <img className="icon" src={sound} alt="start"/>
-        <img className="icon"  src={second} alt="start"/>
-        <img className="icon"  src={virus} alt="start"/>
+        <img className="icon" src={sound} alt="sound"/>
+        <img className="icon"  src={second} alt="second"/>
+        <img className="icon"  src={virus} alt="virus"/>
          
             <div className="time">
                {time}
