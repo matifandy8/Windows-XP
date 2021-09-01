@@ -3,12 +3,19 @@ import startbutton from './start.png';
 import sound from './soundicon.png';
 import second from './secondicon.png';
 import virus from './virusicon.png';
+import { useEffect, useState } from "react";
 
 
 const StartBar: React.FC = () => {
-    const today = new Date()
-    const time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    let time = new Date().toLocaleTimeString();
 
+    const [ctime, setCtime] = useState(time);
+  
+     const UpdateTime = () => {
+         time = new Date().toLocaleTimeString();
+         setCtime(time)
+     }
+    setInterval(UpdateTime, 1000)
     return (
     <div className="StartBar">
         <div className="items item-left">
@@ -22,7 +29,7 @@ const StartBar: React.FC = () => {
         <img className="icon"  src={virus} alt="virus"/>
          
             <div className="time">
-               {time}
+               {ctime}
             </div>
         </div>
     </div>

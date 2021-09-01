@@ -1,0 +1,7 @@
+.ModalInternet{
+    transform: translate(140px, 30px);
+    width: 700px;
+    height: 500px;
+    z-index: 51;
+    cursor: auto;
+}

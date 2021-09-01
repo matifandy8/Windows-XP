@@ -7,9 +7,14 @@ import notepad from './notepad.png';
 
 const IconsDesktop: React.FC = () => {
 
+
+    const handleDoubleClick = () => {
+        console.log('handleDoubleClick catched');
+      };
+
     return (
         <div className="IconsDesktop">
-            <div className="icon__desktop" tabIndex={1}>
+            <div onDoubleClick={handleDoubleClick} className="icon__desktop" tabIndex={1}>
             <img className="icon__img" tabIndex={1}  src={internet} alt="internet"/>
             <span className="icon__text" tabIndex={1}  >Internet Exporer</span>
             </div>
