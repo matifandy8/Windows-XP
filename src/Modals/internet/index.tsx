@@ -1,6 +1,8 @@
 import "./index.css";
 import modalinternet from "./modalinternet.png";
 import windowslogo from "./windowslogo.png";
+import cv from "./cv.png";
+
 import leftbutton from "./img/icon-button-left.png";
 import rigthbutton from  "./img/icon-button-rigth.png";
 import crossbutton from  "./img/icon-cross.png";
@@ -15,12 +17,26 @@ import todobutton from "./img/icon-todo.png";
 import messengerbutton from "./img/icon-messenger.png";
 import downbutton from "./img/icon-down.png";
 import gobutton from "./img/icon-go.png";
+import useDraggable from "../useDraggable";
+import { useRef } from "react";
 
 
 
 
 const ModalInternet: React.FC = () => {
+  
+  const DraggableCard = ({ children }:any) => {
+    const cardRef = useRef(null);
+    useDraggable(cardRef);
+  
+    return (
+      <div className="card" ref={cardRef}>
+        {children}
+      </div>
+    );
+  };
   return (
+    <DraggableCard>
     <div className="ModalInternet">
       <div className="header">
         <img className="header__img" src={modalinternet} alt="internet" />
@@ -137,11 +153,14 @@ const ModalInternet: React.FC = () => {
           
           </div>
           </section>
-          <div className="content__cv"></div>
+          <div className="content__cv">
+          <img className="img-cv" src={cv} alt="cv" />
+          </div>
           <div className="content__footer"></div>
         </div>
       </div>
     </div>
+    </DraggableCard>
   );
 };
 
